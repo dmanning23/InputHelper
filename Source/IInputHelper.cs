@@ -6,7 +6,7 @@ namespace InputHelper
 	/// <summary>
 	/// This is an interface for managing highlighting and selection of items based on user input
 	/// </summary>
-	public interface IInputHelper : IUpdateable
+	public interface IInputHelper
 	{
 		/// <summary>
 		/// A list of all the clicks that occured during the last update.
