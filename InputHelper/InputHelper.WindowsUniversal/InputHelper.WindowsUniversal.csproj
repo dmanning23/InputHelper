@@ -134,14 +134,8 @@
     <Compile Include="..\..\Source\IInputHelper.cs">
       <Link>IInputHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Source\ISelectable.cs">
-      <Link>ISelectable.cs</Link>
-    </Compile>
     <Compile Include="..\..\Source\MouseButton.cs">
       <Link>MouseButton.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\SelectedEventArgs.cs">
-      <Link>SelectedEventArgs.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\InputHelper.WindowsUniversal.rd.xml" />

@@ -23,5 +23,10 @@ namespace InputHelper
 		{
 			get; set;
 		}
+
+		/// <summary>
+		/// Gets the index of the player who triggered this event.
+		/// </summary>
+		public PlayerIndex? PlayerIndex { get; set; }
 	}
 }
