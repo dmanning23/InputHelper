@@ -8,6 +8,14 @@ namespace InputHelper
 	/// </summary>
 	public interface IClickable
 	{
+		/// <summary>
+		/// True if this thing has been clicked recently
+		/// </summary>
+		bool Selected { get; }
+
+		/// <summary>
+		/// Event that gets called when this thing is clicked
+		/// </summary>
 		event EventHandler<ClickEventArgs> OnClick;
 
 		/// <summary>
