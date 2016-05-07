@@ -24,12 +24,5 @@ namespace InputHelper
 		/// <param name="position">the position that was clicked</param>
 		/// <returns>bool: true if this item was clicked in, false if not</returns>
 		bool CheckClick(ClickEventArgs click);
-
-		/// <summary>
-		/// This method gets called when the item is clicked.
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <param name="player"></param>
-		void Clicked(object obj, PlayerIndex player);
 	}
 }
