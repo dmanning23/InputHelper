@@ -11,7 +11,7 @@ namespace InputHelper
 		/// <summary>
 		/// True if this thing has been clicked recently
 		/// </summary>
-		bool Selected { get; }
+		bool IsClicked { get; }
 
 		/// <summary>
 		/// Event that gets called when this thing is clicked
