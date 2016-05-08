@@ -60,14 +60,14 @@ namespace MouseBuddyExample
 
 		public DebugInputComponent(Game game) : base(game)
 		{
-			var graphics = new GraphicsDeviceManager(game);
-
 			Cursor = new List<HighlightEventArgs>();
 			Clicks = new List<ClickEventArgs>();
 			Drops = new List<DropEventArgs>();
 			Drags = new List<DragEventArgs>();
 
 			Input = game.Services.GetService<IInputHelper>();
+
+			game.Components.Add(this);
 		}
 
 		/// <summary>
