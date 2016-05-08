@@ -42,6 +42,10 @@
       <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.5.1.1679\lib\net40\OpenTK.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PrimitiveBuddy.DesktopGL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PrimitiveBuddy.1.0.0\lib\net451\PrimitiveBuddy.DesktopGL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +61,9 @@
     </Compile>
     <Compile Include="..\..\Source\ClickEventArgs.cs">
       <Link>ClickEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\DebugInputComponent.cs">
+      <Link>DebugInputComponent.cs</Link>
     </Compile>
     <Compile Include="..\..\Source\DragEventArgs.cs">
       <Link>DragEventArgs.cs</Link>

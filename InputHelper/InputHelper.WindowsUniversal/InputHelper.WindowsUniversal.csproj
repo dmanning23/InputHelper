@@ -113,6 +113,9 @@
     <Compile Include="..\..\Source\ClickEventArgs.cs">
       <Link>ClickEventArgs.cs</Link>
     </Compile>
+    <Compile Include="..\..\Source\DebugInputComponent.cs">
+      <Link>DebugInputComponent.cs</Link>
+    </Compile>
     <Compile Include="..\..\Source\DragEventArgs.cs">
       <Link>DragEventArgs.cs</Link>
     </Compile>

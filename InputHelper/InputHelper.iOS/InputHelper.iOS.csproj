@@ -35,6 +35,10 @@
       <HintPath>..\packages\MonoGame.Framework.iOS.3.5.1.1679\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PrimitiveBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PrimitiveBuddy.1.0.0\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -49,6 +53,9 @@
     </Compile>
     <Compile Include="..\..\Source\ClickEventArgs.cs">
       <Link>ClickEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Source\DebugInputComponent.cs">
+      <Link>DebugInputComponent.cs</Link>
     </Compile>
     <Compile Include="..\..\Source\DragEventArgs.cs">
       <Link>DragEventArgs.cs</Link>
