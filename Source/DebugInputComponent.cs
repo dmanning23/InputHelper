@@ -6,7 +6,7 @@ using PrimitiveBuddy;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MouseBuddyExample
+namespace InputHelper
 {
 	/// <summary>
 	/// This is a game component for debugging input helper objects.
