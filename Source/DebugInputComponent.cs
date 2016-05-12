@@ -9,6 +9,13 @@ using System.Linq;
 namespace InputHelper
 {
 	/// <summary>
+	/// The matrix to convert from game to screen cooridinates
+	/// </summary>
+	/// <param name="screenCoord"></param>
+	/// <returns></returns>
+	public delegate Matrix ConvertToScreenMatrix();
+
+	/// <summary>
 	/// This is a game component for debugging input helper objects.
 	/// Add one of these to your game, and it will render the highlights, clicks, drags, and drops.
 	/// </summary>
@@ -17,6 +24,8 @@ namespace InputHelper
 		#region Fields
 
 		SpriteBatch _spriteBatch;
+
+		ConvertToScreenMatrix _transform;
 
 		#endregion //Fields
 
@@ -58,12 +67,13 @@ namespace InputHelper
 
 		#region Methods
 
-		public DebugInputComponent(Game game) : base(game)
+		public DebugInputComponent(Game game, ConvertToScreenMatrix transform) : base(game)
 		{
 			Cursor = new List<HighlightEventArgs>();
 			Clicks = new List<ClickEventArgs>();
 			Drops = new List<DropEventArgs>();
 			Drags = new List<DragEventArgs>();
+			_transform = transform;
 
 			Input = game.Services.GetService<IInputHelper>();
 
@@ -134,7 +144,10 @@ namespace InputHelper
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		public override void Draw(GameTime gameTime)
 		{
-			_spriteBatch.Begin();
+			_spriteBatch.Begin(SpriteSortMode.Deferred,
+							  BlendState.AlphaBlend,
+							  null, null, null, null,
+							  (null != _transform ? _transform() : Matrix.Identity));
 
 			DrawDebugInfo();
 
