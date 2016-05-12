@@ -136,6 +136,18 @@ namespace InputHelper
 		{
 			_spriteBatch.Begin();
 
+			DrawDebugInfo();
+
+			_spriteBatch.End();
+
+			base.Draw(gameTime);
+		}
+
+		/// <summary>
+		/// Call this to render all the debug info.
+		/// </summary>
+		public void DrawDebugInfo()
+		{
 			//draw the mouse cursor
 			Prim.Thickness = 2;
 			foreach (var mouseEvent in Cursor)
@@ -167,10 +179,6 @@ namespace InputHelper
 				Prim.Line(mouseEvent.Start, mouseEvent.Drop, Color.DarkGreen);
 				Prim.Circle(mouseEvent.Drop, 10, Color.DarkGreen);
 			}
-
-			_spriteBatch.End();
-
-			base.Draw(gameTime);
 		}
 
 		#endregion //Methods
