@@ -48,6 +48,9 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Source\BaseInputHelper.cs">
+      <Link>BaseInputHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Source\ButtonDownEventArgs.cs">
       <Link>ButtonDownEventArgs.cs</Link>
     </Compile>
