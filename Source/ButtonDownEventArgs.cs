@@ -8,6 +8,8 @@ namespace InputHelper
 	/// </summary>
 	public class ButtonDownEventArgs : EventArgs
 	{
+		#region Fields
+
 		/// <summary>
 		/// the screen location where the mouse cursor is being held
 		/// </summary>
@@ -23,5 +25,21 @@ namespace InputHelper
 		{
 			get; set;
 		}
+
+		#endregion //Fields
+
+		#region Methods
+
+		public ButtonDownEventArgs()
+		{
+		}
+
+		public ButtonDownEventArgs(Vector2 position, MouseButton button)
+		{
+			Position = position;
+			Button = button;
+		}
+
+		#endregion //Methods
 	}
 }

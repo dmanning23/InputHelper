@@ -8,6 +8,8 @@ namespace InputHelper
 	/// </summary>
 	public class ClickEventArgs : EventArgs
 	{
+		#region Fields
+
 		/// <summary>
 		/// the screen location of this mouse click
 		/// </summary>
@@ -28,5 +30,22 @@ namespace InputHelper
 		/// Gets the index of the player who triggered this event.
 		/// </summary>
 		public PlayerIndex? PlayerIndex { get; set; }
+
+		#endregion //Fields
+
+		#region Methods
+
+		public ClickEventArgs()
+		{
+		}
+
+		public ClickEventArgs(Vector2 position, MouseButton button, PlayerIndex? playerIndex)
+		{
+			Position = position;
+			Button = button;
+			PlayerIndex = playerIndex;
+		}
+
+		#endregion //Methods
 	}
 }

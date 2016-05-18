@@ -8,6 +8,8 @@ namespace InputHelper
 	/// </summary>
 	public class DragEventArgs : EventArgs
 	{
+		#region Fields
+
 		/// <summary>
 		/// where the drag event started
 		/// </summary>
@@ -39,5 +41,23 @@ namespace InputHelper
 		{
 			get; set;
 		}
+
+		#endregion //Fields
+
+		#region Methods
+
+		public DragEventArgs()
+		{
+		}
+
+		public DragEventArgs(Vector2 start, Vector2 current, Vector2 delta, MouseButton button)
+		{
+			Start = start;
+			Current = current;
+			Delta = delta;
+			Button = button;
+		}
+
+		#endregion //Methods
 	}
 }
