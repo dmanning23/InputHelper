@@ -78,6 +78,9 @@
     <Compile Include="..\..\Source\IDraggable.cs">
       <Link>IDraggable.cs</Link>
     </Compile>
+    <Compile Include="..\..\Source\IDroppable.cs">
+      <Link>IDroppable.cs</Link>
+    </Compile>
     <Compile Include="..\..\Source\IHighlightable.cs">
       <Link>IHighlightable.cs</Link>
     </Compile>
