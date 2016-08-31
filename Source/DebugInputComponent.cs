@@ -107,6 +107,13 @@ namespace InputHelper
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		public override void Update(GameTime gameTime)
 		{
+			if (null == Input)
+			{
+				//If the IInputHelper is null, this is probably a controller game.
+				//There is nothing to debug!
+				return;
+			}
+
 			Drag = null;
 
 			Cursor.AddRange(Input.Highlights);
