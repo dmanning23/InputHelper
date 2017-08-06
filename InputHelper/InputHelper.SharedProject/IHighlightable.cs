@@ -10,7 +10,7 @@ namespace InputHelper
 		/// <summary>
 		/// Highlight or don't highlight this screen item
 		/// </summary>
-		bool IsHighlighted { set; }
+		bool IsHighlighted { get;  set; }
 
 		event EventHandler<HighlightEventArgs> OnHighlight;
 
