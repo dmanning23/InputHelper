@@ -11,8 +11,8 @@
     <AssemblyName>InputHelper.WindowsUniversal</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -107,48 +107,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\BaseInputHelper.cs">
-      <Link>BaseInputHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\ButtonDownEventArgs.cs">
-      <Link>ButtonDownEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\ClickEventArgs.cs">
-      <Link>ClickEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DebugInputComponent.cs">
-      <Link>DebugInputComponent.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DragEventArgs.cs">
-      <Link>DragEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DropEventArgs.cs">
-      <Link>DropEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\HighlightEventArgs.cs">
-      <Link>HighlightEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IClickable.cs">
-      <Link>IClickable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IDraggable.cs">
-      <Link>IDraggable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IDroppable.cs">
-      <Link>IDroppable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IHighlightable.cs">
-      <Link>IHighlightable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IInputHelper.cs">
-      <Link>IInputHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\MouseButton.cs">
-      <Link>MouseButton.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\InputHelper.WindowsUniversal.rd.xml" />
   </ItemGroup>
+  <Import Project="..\InputHelper.SharedProject\InputHelper.SharedProject.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

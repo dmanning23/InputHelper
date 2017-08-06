@@ -31,66 +31,40 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MatrixExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MatrixExtensions.1.0.2\lib\Xamarin.iOS10\MatrixExtensions.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.iOS.3.5.1.1679\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PrimitiveBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.1.0.0\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.1.0.3\lib\Xamarin.iOS10\PrimitiveBuddy.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RandomExtensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RandomExtensions.dmanning23.1.0.3\lib\Xamarin.iOS10\RandomExtensions.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="Vector2Extensions.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vector2Extensions.1.0.6\lib\Xamarin.iOS10\Vector2Extensions.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\BaseInputHelper.cs">
-      <Link>BaseInputHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\ButtonDownEventArgs.cs">
-      <Link>ButtonDownEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\ClickEventArgs.cs">
-      <Link>ClickEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DebugInputComponent.cs">
-      <Link>DebugInputComponent.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DragEventArgs.cs">
-      <Link>DragEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\DropEventArgs.cs">
-      <Link>DropEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\HighlightEventArgs.cs">
-      <Link>HighlightEventArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IClickable.cs">
-      <Link>IClickable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IDraggable.cs">
-      <Link>IDraggable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IDroppable.cs">
-      <Link>IDroppable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IHighlightable.cs">
-      <Link>IHighlightable.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\IInputHelper.cs">
-      <Link>IInputHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Source\MouseButton.cs">
-      <Link>MouseButton.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="..\InputHelper.SharedProject\InputHelper.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

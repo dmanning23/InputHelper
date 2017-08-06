@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ac6a74b3-0a65-4eaf-9815-0c3985d5e064</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>InputHelper.SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BaseInputHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ButtonDownEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClickEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DebugInputComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DragEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DropEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HighlightEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IClickable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDraggable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDroppable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IHighlightable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IInputHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MouseButton.cs" />
+  </ItemGroup>
+</Project>

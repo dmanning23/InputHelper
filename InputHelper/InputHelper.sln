@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.Android", "InputHelper.Android\InputHelper.Android.csproj", "{EDA3BB89-62AE-49A2-BCB4-DEBA72B63550}"
 EndProject
@@ -17,7 +17,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		InputHelper.nuspec = InputHelper.nuspec
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "InputHelper.SharedProject", "InputHelper.SharedProject\InputHelper.SharedProject.shproj", "{AC6A74B3-0A65-4EAF-9815-0C3985D5E064}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{44a8366b-8c01-4df7-a6af-007a6fee6625}*SharedItemsImports = 4
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{6a06a476-f002-4e2f-a671-10b6c1bb7121}*SharedItemsImports = 4
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{ac6a74b3-0a65-4eaf-9815-0c3985d5e064}*SharedItemsImports = 13
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{d12e5b94-3da0-4d22-8663-3e6f0054718b}*SharedItemsImports = 4
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{eda3bb89-62ae-49a2-bcb4-deba72b63550}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppStore|Any CPU = AppStore|Any CPU
 		AppStore|ARM = AppStore|ARM
