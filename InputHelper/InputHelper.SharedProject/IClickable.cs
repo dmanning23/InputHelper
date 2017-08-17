@@ -9,6 +9,11 @@ namespace InputHelper
 	public interface IClickable
 	{
 		/// <summary>
+		/// Even though this is a IClickable object, sometimes you just don't want them to be clicked.
+		/// </summary>
+		bool Clickable { get; set; }
+
+		/// <summary>
 		/// True if this thing has been clicked recently
 		/// </summary>
 		bool IsClicked { get; set; }

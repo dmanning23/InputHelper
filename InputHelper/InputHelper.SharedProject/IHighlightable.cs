@@ -8,6 +8,11 @@ namespace InputHelper
 	public interface IHighlightable
 	{
 		/// <summary>
+		/// Even though this is a IHighlightable object, sometimes you just don't want them to be highlighted.
+		/// </summary>
+		bool Highlightable { get; set; }
+
+		/// <summary>
 		/// Highlight or don't highlight this screen item
 		/// </summary>
 		bool IsHighlighted { get;  set; }
