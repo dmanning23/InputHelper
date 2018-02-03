@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>InputHelper</id>
-		<version>1.0.20</version>
+		<version>1.0.21</version>
 		<title>InputHelper</title>
 		<authors>dmanning23</authors>
 		<owners>dmanning23</owners>
@@ -35,7 +35,7 @@
 			</group>
 
 			<group targetFramework="net451">
-				<dependency id="MonoGame.Framework.DesktopGL" version="3.5"/>
+				<dependency id="MonoGame.Framework.WindowsDX" version="3.5"/>
 				<dependency id="PrimitiveBuddy" version="1.0"/>
 			</group>
 
@@ -55,9 +55,9 @@
 		<file src="InputHelper.WindowsUniversal\bin\Release\InputHelper.WindowsUniversal.pdb" target="lib\uap10.0\InputHelper.WindowsUniversal.pdb" />
 		<file src="InputHelper.WindowsUniversal\bin\Release\InputHelper.WindowsUniversal.dll" target="lib\uap10.0\InputHelper.WindowsUniversal.dll" />
 
-		<!--DesktopGL-->
-		<file src="InputHelper.DesktopGL\bin\Release\InputHelper.DesktopGL.pdb" target="lib\net451\InputHelper.DesktopGL.pdb" />
-		<file src="InputHelper.DesktopGL\bin\Release\InputHelper.DesktopGL.dll" target="lib\net451\InputHelper.DesktopGL.dll" />
+		<!--WindowsDX-->
+		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.pdb" target="lib\net451\InputHelper.WindowsDX.pdb" />
+		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.dll" target="lib\net451\InputHelper.WindowsDX.dll" />
 
 	</files>
 </package>

@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.Android", "InputHelper.Android\InputHelper.Android.csproj", "{EDA3BB89-62AE-49A2-BCB4-DEBA72B63550}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.iOS", "InputHelper.iOS\InputHelper.iOS.csproj", "{D12E5B94-3DA0-4D22-8663-3E6F0054718B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.DesktopGL", "InputHelper.DesktopGL\InputHelper.DesktopGL.csproj", "{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.WindowsUniversal", "InputHelper.WindowsUniversal\InputHelper.WindowsUniversal.csproj", "{6A06A476-F002-4E2F-A671-10B6C1BB7121}"
 EndProject
@@ -19,9 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "InputHelper.SharedProject", "InputHelper.SharedProject\InputHelper.SharedProject.shproj", "{AC6A74B3-0A65-4EAF-9815-0C3985D5E064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputHelper.WindowsDX", "InputHelper.WindowsDX\InputHelper.WindowsDX.csproj", "{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{44a8366b-8c01-4df7-a6af-007a6fee6625}*SharedItemsImports = 4
+		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{66be5acf-d1fe-43e2-8b25-f3303461cbdf}*SharedItemsImports = 4
 		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{6a06a476-f002-4e2f-a671-10b6c1bb7121}*SharedItemsImports = 4
 		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{ac6a74b3-0a65-4eaf-9815-0c3985d5e064}*SharedItemsImports = 13
 		InputHelper.SharedProject\InputHelper.SharedProject.projitems*{d12e5b94-3da0-4d22-8663-3e6f0054718b}*SharedItemsImports = 4
@@ -90,30 +90,6 @@ Global
 		{D12E5B94-3DA0-4D22-8663-3E6F0054718B}.Release|x64.Build.0 = Release|Any CPU
 		{D12E5B94-3DA0-4D22-8663-3E6F0054718B}.Release|x86.ActiveCfg = Release|Any CPU
 		{D12E5B94-3DA0-4D22-8663-3E6F0054718B}.Release|x86.Build.0 = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|ARM.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|ARM.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|x64.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|x64.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|x86.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.AppStore|x86.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|ARM.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|x64.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Debug|x86.Build.0 = Debug|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|ARM.ActiveCfg = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|ARM.Build.0 = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|x64.ActiveCfg = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|x64.Build.0 = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|x86.ActiveCfg = Release|Any CPU
-		{44A8366B-8C01-4DF7-A6AF-007A6FEE6625}.Release|x86.Build.0 = Release|Any CPU
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.AppStore|Any CPU.Build.0 = Release|Any CPU
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.AppStore|ARM.ActiveCfg = Release|ARM
@@ -138,8 +114,35 @@ Global
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.Release|x64.Build.0 = Release|x64
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.Release|x86.ActiveCfg = Release|x86
 		{6A06A476-F002-4E2F-A671-10B6C1BB7121}.Release|x86.Build.0 = Release|x86
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|ARM.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|x64.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.AppStore|x86.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|ARM.Build.0 = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|x64.Build.0 = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|ARM.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|x64.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|x64.Build.0 = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{66BE5ACF-D1FE-43E2-8B25-F3303461CBDF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1084F6F3-10E3-4E06-9793-226B4D1C25E7}
 	EndGlobalSection
 EndGlobal
