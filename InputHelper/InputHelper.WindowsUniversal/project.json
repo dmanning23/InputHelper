@@ -1,9 +1,9 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.1.7",
-    "MonoGame.Framework.WindowsUniversal": "3.6.0.1625",
-    "PrimitiveBuddy": "1.0.4",
-    "Vector2Extensions": "1.0.13"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9",
+    "MonoGame.Framework.WindowsUniversal": "3.7.0.1708",
+    "PrimitiveBuddy": "2.0.0",
+    "Vector2Extensions": "2.0.0"
   },
   "frameworks": {
     "uap10.0.10586": {}
