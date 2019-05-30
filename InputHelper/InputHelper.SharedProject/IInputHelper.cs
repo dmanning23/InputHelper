@@ -39,5 +39,15 @@ namespace InputHelper
 		{
 			get;
 		}
+
+		List<FlickEventArgs> Flicks
+		{
+			get;
+		}
+
+		List<PinchEventArgs> Pinches
+		{
+			get;
+		}
 	}
 }

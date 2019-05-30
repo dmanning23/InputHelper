@@ -6,7 +6,7 @@
     <SharedGUID>ac6a74b3-0a65-4eaf-9815-0c3985d5e064</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>InputHelper.SharedProject</Import_RootNamespace>
+    <Import_RootNamespace>InputHelper</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BaseInputHelper.cs" />
@@ -15,6 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)DebugInputComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DragEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DropEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PinchEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FlickEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HighlightEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IClickable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IDraggable.cs" />

@@ -31,37 +31,21 @@ namespace InputHelper
 
 		#region Properties
 
-		private IInputHelper Input
-		{
-			get; set;
-		}
+		private IInputHelper Input { get; set; }
 
-		private Primitive Prim
-		{
-			get; set;
-		}
+		private Primitive Prim { get; set; }
 
-		private List<HighlightEventArgs> Cursor
-		{
-			get; set;
-		}
+		private List<HighlightEventArgs> Cursor { get; set; }
 
-		private List<ClickEventArgs> Clicks
-		{
-			get; set;
-		}
+		private List<ClickEventArgs> Clicks { get; set; }
 
-		private DragEventArgs Drag
-		{
-			get; set;
-		}
+		private DragEventArgs Drag { get; set; }
 
-		private List<DragEventArgs> Drags
-		{
-			get; set;
-		}
+		private List<DragEventArgs> Drags { get; set; }
 
 		private List<DropEventArgs> Drops { get; set; }
+
+		private List<FlickEventArgs> Flicks { get; set; }
 
 		#endregion //Properties
 
@@ -73,6 +57,7 @@ namespace InputHelper
 			Clicks = new List<ClickEventArgs>();
 			Drops = new List<DropEventArgs>();
 			Drags = new List<DragEventArgs>();
+			Flicks = new List<FlickEventArgs>();
 			_transform = transform;
 
 			Input = game.Services.GetService<IInputHelper>();
@@ -121,6 +106,7 @@ namespace InputHelper
 			Drags.AddRange(Input.Drags);
 			Drag = Input.Drags.FirstOrDefault();
 			Drops.AddRange(Input.Drops);
+			Flicks.AddRange(Input.Flicks);
 
 			while (Cursor.Count > 1)
 			{
@@ -140,6 +126,11 @@ namespace InputHelper
 			while (Drags.Count > 30)
 			{
 				Drags.RemoveAt(0);
+			}
+
+			while (Flicks.Count > 1)
+			{
+				Flicks.RemoveAt(0);
 			}
 
 			base.Update(gameTime);
@@ -191,6 +182,11 @@ namespace InputHelper
 			foreach (var mouseEvent in Clicks)
 			{
 				Prim.Circle(mouseEvent.Position, 10, (mouseEvent.Button == MouseButton.Left) ? Color.Red : Color.DarkRed);
+
+				if (mouseEvent.DoubleClick)
+				{
+					Prim.Circle(mouseEvent.Position, 20, (mouseEvent.Button == MouseButton.Left) ? Color.Red : Color.DarkRed);
+				}
 			}
 
 			//draw the drop in dark green
@@ -198,6 +194,13 @@ namespace InputHelper
 			{
 				Prim.Line(mouseEvent.Start, mouseEvent.Drop, Color.DarkGreen);
 				Prim.Circle(mouseEvent.Drop, 10, Color.DarkGreen);
+			}
+
+			//Draw the Flick events
+			foreach (var mouseEvent in Flicks)
+			{
+				Prim.Circle(mouseEvent.Position, 10, Color.Orange);
+				Prim.Line(mouseEvent.Position, mouseEvent.Position + mouseEvent.Delta, Color.Orange);
 			}
 		}
 

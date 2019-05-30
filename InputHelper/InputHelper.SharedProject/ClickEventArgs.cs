@@ -31,6 +31,8 @@ namespace InputHelper
 		/// </summary>
 		public PlayerIndex? PlayerIndex { get; set; }
 
+		public bool DoubleClick { get; set; } = false;
+
 		#endregion //Fields
 
 		#region Methods
