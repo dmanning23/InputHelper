@@ -29,7 +29,7 @@ namespace InputHelper
 		/// <summary>
 		/// Gets the index of the player who triggered this event.
 		/// </summary>
-		public PlayerIndex? PlayerIndex { get; set; }
+		public int? PlayerIndex { get; set; }
 
 		public bool DoubleClick { get; set; } = false;
 
@@ -41,7 +41,7 @@ namespace InputHelper
 		{
 		}
 
-		public ClickEventArgs(Vector2 position, MouseButton button, PlayerIndex? playerIndex)
+		public ClickEventArgs(Vector2 position, MouseButton button, int? playerIndex)
 		{
 			Position = position;
 			Button = button;
