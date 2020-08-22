@@ -1,10 +1,14 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 
 namespace InputHelper
 {
 	public class PinchEventArgs : EventArgs
 	{
+		/// <summary>
+		/// True if the pinch is a "release" action
+		/// </summary>
+		public bool Release { get; set; }
+
 		/// <summary>
 		/// The amount of change since last update
 		/// </summary>
@@ -15,9 +19,10 @@ namespace InputHelper
 
 		public PinchEventArgs()
 		{
+			Release = false;
 		}
 
-		public PinchEventArgs(float delta)
+		public PinchEventArgs(float delta) : this()
 		{
 			Delta = delta;
 		}
