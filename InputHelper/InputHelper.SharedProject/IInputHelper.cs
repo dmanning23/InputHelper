@@ -49,5 +49,10 @@ namespace InputHelper
 		{
 			get;
 		}
+
+		List<HoldEventArgs> Holds
+		{
+			get;
+		}
 	}
 }

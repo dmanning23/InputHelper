@@ -9,12 +9,14 @@
     <Import_RootNamespace>InputHelper</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BaseInputHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseInputManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ButtonDownEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ClickEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DebugInputComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DragEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DropEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HoldEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IHoldable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPinchable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IFlickable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PinchEventArgs.cs" />

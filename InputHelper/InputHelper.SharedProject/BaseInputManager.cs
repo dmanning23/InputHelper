@@ -52,6 +52,11 @@ namespace InputHelper
 			get; private set;
 		}
 
+		public List<HoldEventArgs> Holds
+		{
+			get; private set;
+		}
+
 		#endregion //Properties
 
 		#region Methods
@@ -67,6 +72,7 @@ namespace InputHelper
 			Drops = new List<DropEventArgs>();
 			Flicks = new List<FlickEventArgs>();
 			Pinches = new List<PinchEventArgs>();
+			Holds = new List<HoldEventArgs>();
 
 			_gameCoord = gameCoord;
 		}
