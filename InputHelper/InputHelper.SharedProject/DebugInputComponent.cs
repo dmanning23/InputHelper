@@ -33,6 +33,19 @@ namespace InputHelper
 
 		private IInputHelper Input { get; set; }
 
+		Color mouseCursorColor = Color.Yellow;
+		Color dragDeltaColor = Color.LimeGreen;
+		Color dragColor = Color.Green;
+		Color dropColor = Color.DarkGreen;
+		Color leftClickColor = Color.Red;
+		Color rightClickColor = Color.Pink;
+		Color flickColor = Color.Orange;
+
+		Color pinchDeltaColor = Color.Pink;
+		Color pinchFirstColor = Color.Blue;
+		Color pinchSecondColor = Color.Magenta;
+		Color pinchReleaseColor = Color.DarkBlue;
+
 		private Primitive Prim { get; set; }
 
 		private List<HighlightEventArgs> Cursor { get; set; }
@@ -47,6 +60,10 @@ namespace InputHelper
 
 		private List<FlickEventArgs> Flicks { get; set; }
 
+		private PinchEventArgs Pinch { get; set; }
+
+		private List<PinchEventArgs> Pinches { get; set; }
+
 		#endregion //Properties
 
 		#region Methods
@@ -58,6 +75,7 @@ namespace InputHelper
 			Drops = new List<DropEventArgs>();
 			Drags = new List<DragEventArgs>();
 			Flicks = new List<FlickEventArgs>();
+			Pinches = new List<PinchEventArgs>();
 			_transform = transform;
 
 			Input = game.Services.GetService<IInputHelper>();
@@ -100,6 +118,7 @@ namespace InputHelper
 			}
 
 			Drag = null;
+			Pinch = null;
 
 			Cursor.AddRange(Input.Highlights);
 			Clicks.AddRange(Input.Clicks);
@@ -107,6 +126,8 @@ namespace InputHelper
 			Drag = Input.Drags.FirstOrDefault();
 			Drops.AddRange(Input.Drops);
 			Flicks.AddRange(Input.Flicks);
+			Pinches.AddRange(Input.Pinches);
+			Pinch = Input.Pinches.FirstOrDefault();
 
 			while (Cursor.Count > 1)
 			{
@@ -131,6 +152,11 @@ namespace InputHelper
 			while (Flicks.Count > 1)
 			{
 				Flicks.RemoveAt(0);
+			}
+
+			while (Pinches.Count > 1)
+			{
+				Pinches.RemoveAt(0);
 			}
 
 			base.Update(gameTime);
@@ -163,44 +189,64 @@ namespace InputHelper
 			Prim.Thickness = 2;
 			foreach (var mouseEvent in Cursor)
 			{
-				Prim.Circle(mouseEvent.Position, 10, Color.Yellow);
+				Prim.Circle(mouseEvent.Position, 10, mouseCursorColor);
 			}
 
-			//draw the mouse delta in lime green
+			//draw the drag delta
 			foreach (var mouseEvent in Drags)
 			{
-				Prim.Line(mouseEvent.Current, mouseEvent.Current - mouseEvent.Delta, Color.LimeGreen);
+				Prim.Line(mouseEvent.Current, mouseEvent.Current - mouseEvent.Delta, dragDeltaColor);
 			}
 
-			//draw the drag operatino in green
+			//draw the drag operation
 			if (null != Drag)
 			{
-				//Prim.Circle(Drag.Current, 10, Color.Green);
-				Prim.Line(Drag.Start, Drag.Current, Color.Green);
+				Prim.Line(Drag.Start, Drag.Current, dragColor);
 			}
 
 			foreach (var mouseEvent in Clicks)
 			{
-				Prim.Circle(mouseEvent.Position, 10, (mouseEvent.Button == MouseButton.Left) ? Color.Red : Color.DarkRed);
+				Prim.Circle(mouseEvent.Position, 10, (mouseEvent.Button == MouseButton.Left) ? leftClickColor : rightClickColor);
 
 				if (mouseEvent.DoubleClick)
 				{
-					Prim.Circle(mouseEvent.Position, 20, (mouseEvent.Button == MouseButton.Left) ? Color.Red : Color.DarkRed);
+					Prim.Circle(mouseEvent.Position, 20, (mouseEvent.Button == MouseButton.Left) ? leftClickColor : rightClickColor);
 				}
 			}
 
-			//draw the drop in dark green
+			//draw the drop
 			foreach (var mouseEvent in Drops)
 			{
-				Prim.Line(mouseEvent.Start, mouseEvent.Drop, Color.DarkGreen);
-				Prim.Circle(mouseEvent.Drop, 10, Color.DarkGreen);
+				Prim.Line(mouseEvent.Start, mouseEvent.Drop, dropColor);
+				Prim.Circle(mouseEvent.Drop, 10, dropColor);
 			}
 
 			//Draw the Flick events
 			foreach (var mouseEvent in Flicks)
 			{
-				Prim.Circle(mouseEvent.Position, 10, Color.Orange);
-				Prim.Line(mouseEvent.Position, mouseEvent.Position + mouseEvent.Delta, Color.Orange);
+				Prim.Circle(mouseEvent.Position, 10, flickColor);
+				Prim.Line(mouseEvent.Position, mouseEvent.Position + mouseEvent.Delta, flickColor);
+			}
+
+			//draw the pinch delta
+			foreach (var mouseEvent in Pinches)
+			{
+				Prim.Line(mouseEvent.First, mouseEvent.Second, pinchDeltaColor);
+			}
+
+			//draw the pinch release in
+			foreach (var mouseEvent in Pinches)
+			{
+				if (!mouseEvent.Release)
+				{
+					Prim.Circle(mouseEvent.First, 60, pinchFirstColor);
+					Prim.Circle(mouseEvent.Second, 60, pinchSecondColor);
+				}
+				else
+				{
+					Prim.Circle(mouseEvent.First, 60, pinchReleaseColor);
+					Prim.Circle(mouseEvent.Second, 60, pinchReleaseColor);
+				}
 			}
 		}
 

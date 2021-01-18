@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace InputHelper
 {
@@ -17,6 +18,9 @@ namespace InputHelper
 			get; set;
 		}
 
+		public Vector2 First { get; set; }
+		public Vector2 Second { get; set; }
+
 		public PinchEventArgs()
 		{
 			Release = false;
@@ -25,6 +29,12 @@ namespace InputHelper
 		public PinchEventArgs(float delta) : this()
 		{
 			Delta = delta;
+		}
+
+		public PinchEventArgs(Vector2 first, Vector2 second, float delta) : this(delta)
+		{
+			First = first;
+			Second = second;
 		}
 	}
 }
