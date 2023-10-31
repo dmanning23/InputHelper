@@ -2,34 +2,30 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>InputHelper</id>
-		<version>2.0.15</version>
+		<version>4.0.0</version>
 		<title>InputHelper</title>
 		<authors>dmanning23</authors>
-		<owners>dmanning23</owners>
 		<projectUrl>https://github.com/dmanning23/InputHelper</projectUrl>
 		<licenseUrl>https://github.com/dmanning23/InputHelper/blob/master/LICENSE.txt</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Helper classes for wrapping up input from different devices.</description>
-		<releaseNotes />
-		<copyright>Copyright 2016</copyright>
 		<tags>android, ios, windows universal, monogame, xamarin</tags>
 		<dependencies>
 
 			<!--Xamarin.Android-->
 			<group targetFramework="MonoAndroid10">
 				<dependency id="MonoGame.Framework.Android" version="3.7"/>
-				<dependency id="PrimitiveBuddy" version="2.0"/>
+				<dependency id="PrimitiveBuddy" version="4.0"/>
 			</group>
 
 			<!--Xamarin.iOS Unified-->
 			<group targetFramework="Xamarin.iOS10">
 				<dependency id="MonoGame.Framework.iOS" version="3.7"/>
-				<dependency id="PrimitiveBuddy" version="2.0"/>
+				<dependency id="PrimitiveBuddy" version="4.0"/>
 			</group>
 			
-			<group targetFramework="net451">
+			<group targetFramework="net452">
 				<dependency id="MonoGame.Framework.WindowsDX" version="3.7"/>
-				<dependency id="PrimitiveBuddy" version="2.0"/>
+				<dependency id="PrimitiveBuddy" version="4.0"/>
 			</group>
 
 		</dependencies>
@@ -45,8 +41,8 @@
 		<file src="InputHelper.iOS\bin\Release\InputHelper.iOS.dll" target="lib\Xamarin.iOS10\InputHelper.iOS.dll" />
 
 		<!--WindowsDX-->
-		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.pdb" target="lib\net451\InputHelper.WindowsDX.pdb" />
-		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.dll" target="lib\net451\InputHelper.WindowsDX.dll" />
+		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.pdb" target="lib\net452\InputHelper.WindowsDX.pdb" />
+		<file src="InputHelper.WindowsDX\bin\Release\InputHelper.WindowsDX.dll" target="lib\net452\InputHelper.WindowsDX.dll" />
 
 	</files>
 </package>
